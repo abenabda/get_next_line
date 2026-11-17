@@ -6,7 +6,7 @@
 /*   By: abenabda <abenabda@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/06 18:38:59 by abenabda          #+#    #+#             */
-/*   Updated: 2026/11/16 12:27:18 by abenabda         ###   ########.fr       */
+/*   Updated: 2026/11/17 13:40:41 by abenabda         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,11 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	}
 	j = 0;
 	while (s2 && s2[j])
-		out[i++] = s2[j++];
+	{
+		out[i] = s2[j];
+		i++;
+		j++;
+	}
 	out[i] = '\0';
 	return (out);
 }
